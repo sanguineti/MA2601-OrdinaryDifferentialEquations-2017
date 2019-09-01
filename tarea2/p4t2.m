@@ -1,5 +1,5 @@
-%Par�metros para el calculo de u(t) y r(t)
-%(mismo codigo usado en la P1)
+%Parámetros para el calculo de u(t) y r(t)
+%(mismo código usado en la P1)
 c1 = 0.175;
 c2 = 0.025;
 alfa = 0.1;
@@ -18,8 +18,8 @@ for i = 1:800
     r(i + 1) = r(i) + r_prima;
 end
 
-%Par�metros para el calculo de sigma(t)
-%(mismo codigo usado en la P2)
+%Parámetros para el calculo de sigma(t)
+%(mismo código usado en la P2)
 t = (0:1:800);
 b1 = -0.03;
 b2 = 20;
@@ -43,7 +43,7 @@ for i = 1:800
     sigma(i + 1) = (sigma(i) + sigma_m * max(a(i + 1), 0)) / (1 + abs(a(i + 1)));
 end
 
-%Parametros para el calculo de y(t)
+%Parámetros para el calculo de y(t)
 k = 0.001; %se define el valor de k
 c = sqrt(k); %se define el valor de c en funcion de k
 z1 = zeros(1, length(t)); %vector de ceros para z1
@@ -65,7 +65,7 @@ end
 
 %Grafico
 plot(t, z1)
-title('Acortamiento de la c�lula cardiaca en funci�n del tiempo')
+title('Acortamiento de la célula cardíaca en función del tiempo')
 xlabel('t')
 ylabel('y(t)')
 hold on

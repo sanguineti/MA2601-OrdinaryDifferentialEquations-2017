@@ -1,5 +1,5 @@
 %Fibrosis (pregunta 5)
-%Par�metros para el calculo de u(t) y r(t)
+%Parámetros para el calculo de u(t) y r(t)
 %Es el mismo codigo usado (y explicado) en la p1
 c1 = 0.175;
 c2 = 0.025;
@@ -19,7 +19,7 @@ for i = 1:800
     r(i + 1) = r(i) + r_prima;
 end
 
-%Par�metros para el calculo de sigma(t)
+%Parámetros para el calculo de sigma(t)
 %Es el mismo codigo usado (y explicado) en la p2
 t = (0:1:800);
 b1 = -0.03;
@@ -44,9 +44,9 @@ for i = 1:800
     sigma(i + 1) = (sigma(i) + sigma_m * max(a(i + 1), 0)) / (1 + abs(a(i + 1)));
 end
 
-%Parametros para el calculo de y(t)
-%Es el mismo codigo usado en la p4
-k = 1; %Parametro modificado para la patologia
+%Parámetros para el calculo de y(t)
+%Es el mismo código usado en la p4
+k = 1; %Parámetro modificado para la patología
 c = sqrt(k);
 z1 = zeros(1, length(t));
 z2 = zeros(1, length(t));
@@ -62,10 +62,10 @@ for n = 1:800;
 
 end
 
-%Graficos
+%Gráficos
 hold on
-subplot(2, 2, 1), plot(t, z1); title('Acortamiento de la c�lula cardiaca y(t)');
-subplot(2, 2, 2), plot(t, sigma); title('Tensi�n de la c�lula sigma(t)');
-subplot(2, 2, 3), plot(t, r); title('Variable de restituci�n r(t)');
-subplot(2, 2, 4), plot(t, u); title('Potencial el�ctrico normalizado u(t)');
+subplot(2, 2, 1), plot(t, z1); title('Acortamiento de la célula cardiaca y(t)');
+subplot(2, 2, 2), plot(t, sigma); title('Tensión de la célula sigma(t)');
+subplot(2, 2, 3), plot(t, r); title('Variable de restitución r(t)');
+subplot(2, 2, 4), plot(t, u); title('Potencial eléctrico normalizado u(t)');
 hold off

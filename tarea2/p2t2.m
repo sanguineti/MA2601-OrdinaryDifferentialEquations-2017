@@ -1,8 +1,7 @@
 %Pregunta 2
 
-%Par�metros para el calculo de u(t) y r(t) (pregunta 1)
-%Aqui es el mismo codigo de la pregunta 1, por tanto
-%no estara explicado en detalle
+%Parámetros para el calculo de u(t) y r(t) (pregunta 1)
+%Aquí es el mismo codigo de la pregunta 1
 c1 = 0.175;
 c2 = 0.025;
 alfa = 0.1;
@@ -21,9 +20,9 @@ for i = 1:800
     r(i + 1) = r(i) + r_prima;
 end
 
-%fin del codigo de la pregunta 1
+%fin del código de la pregunta 1
 
-%Par�metros para el calculo de sigma(t)
+%Parámetros para el calculo de sigma(t)
 b1 = -0.03;
 b2 = 20;
 X = 0.3;
@@ -50,9 +49,9 @@ for i = 1:800
     %se despejo sigma(i+1) en la ecuacion
 end
 
-%Grafico
+%Gráfico
 hold on
 plot(t, sigma)
-title('Tensi�n de la c�lula cardiaca en funci�n del tiempo');
-xlabel('t'), ylabel('Tensi�n')
+title('Tensión de la célula cardiaca en función del tiempo');
+xlabel('t'), ylabel('Tensión')
 hold off

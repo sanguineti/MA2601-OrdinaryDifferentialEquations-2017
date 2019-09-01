@@ -1,6 +1,6 @@
 %Pregunta 1
 
-%Par�metros dados
+%Parámetros dados
 c1 = 0.175;
 c2 = 0.025;
 alfa = 0.1;
