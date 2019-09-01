@@ -1,6 +1,6 @@
 %Pregunta 5
 
-%Par�metros
+%Parámetros
 c1 = 0.175; alfa = 0.1; f = 0; n = 800;
 %Valor de h a variar
 hs = [1, 5, 10, 20, 21.8, 21.9];
@@ -12,7 +12,7 @@ for i = 1:6
     ut = zeros(1, length(t));
 
     for j = 1:n / h
-        %C�lculo de u(t) con metodo de Euler Modificado
+        %Cálculo de u(t) con metodo de Euler Modificado
         uM(1) = 2 * alfa;
         u_prima = c1 * uM(j) * (uM(j) - alfa) * (1 - uM(j)) + f;
         ut(1 + j) = uM(j) + h / 2 * u_prima;
@@ -22,6 +22,6 @@ for i = 1:6
 
     hold on
     subplot(2, 3, i), plot(t, uM)
-    title('Gr�fico de u(t) con m�todo de Euler Modificado')
+    title('Gr�fico de u(t) con método de Euler Modificado')
     xlabel('t'), ylabel('u(t)')
 end

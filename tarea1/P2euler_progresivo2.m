@@ -1,8 +1,8 @@
 %Pregunta 2
 
-%Par�metros
+%Parámetros
 c1 = 0.175; alfa = 0.1; f = 0; n = 800;
-%C�lculo de u(t) con h=1.0 (m�todo de Euler Progresivo)
+%Cálculo de u(t) con h=1.0 (método de Euler Progresivo)
 h = 1.0;
 t = (0:h:n);
 u = zeros(1, length(t));
@@ -13,7 +13,7 @@ for i = 1:n / h
     u(i + 1) = u(i) + h * u_prima;
 end
 
-%C�lculo de u(t) con h maximo (m�todo de Euler Progresivo)
+%Cálculo de u(t) con h maximo (método de Euler Progresivo)
 hv = 24.4;
 tv = (0:hv:n);
 uv = zeros(1, length(tv));
@@ -24,7 +24,7 @@ for j = 1:n / hv
     uv(j + 1) = uv(j) + hv * uv_prima;
 end
 
-%C�lculo despreciando t�rminos cuadr�ticos y c�bicos
+%Cálculo despreciando términos cuadráticos y cúbicos
 hm = 114.28;
 tm = (0:hm:n);
 um = zeros(1, length(tm));
@@ -36,9 +36,9 @@ end
 
 %Gr�ficos
 hold on
-plot(t, u, 'r')%Gr�fico de u(t) con h=1
-plot(tv, uv, 'b')%Gr�fico de u(t) con h max
+plot(t, u, 'r')%Gráfico de u(t) con h=1
+plot(tv, uv, 'b')%Gráfico de u(t) con h max
 xlabel('t')
 ylabel('u(t)')
-title('Gr�fico de u(t) con m�todo de Euler Progresivo')
+title('Gráfico de u(t) con método de Euler Progresivo')
 hold off
